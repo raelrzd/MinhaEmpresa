@@ -1,16 +1,18 @@
 package rezende.israel.minhaempresa.ui.activity;
 
-import androidx.appcompat.app.AppCompatActivity;
-
-import android.graphics.Color;
-import android.graphics.PorterDuff;
 import android.os.Bundle;
 import android.view.View;
-import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
+import android.widget.EditText;
 import android.widget.Spinner;
+import android.widget.TextView;
+
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.fragment.app.DialogFragment;
 
 import rezende.israel.minhaempresa.R;
+import rezende.israel.minhaempresa.datePicker.DatePickerFragment;
+
 
 public class CadastroColaboradoresActivity extends AppCompatActivity {
 
@@ -27,5 +29,16 @@ public class CadastroColaboradoresActivity extends AppCompatActivity {
         adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
         spinner.setAdapter(adapter);
 
+        TextView nome = findViewById(R.id.editTextTextPersonName);
+        TextView sobrenome = findViewById(R.id.editTextTextPersonName2);
+        EditText dataNasc = findViewById(R.id.button2);
+
+
+    }
+
+    public void showDatePickerDialog(View view) {
+        DialogFragment newFragment = new DatePickerFragment();
+        newFragment.show(getSupportFragmentManager(), "datePicker");
     }
 }
+
