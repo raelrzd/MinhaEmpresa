@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="itens_cargos">
+        <item>Comercial</item>
+        <item>Desenvolvimento</item>
+        <item>Suporte Téc.</item>
+        <item>Administrativo</item>
+    </string-array>
+</resources>
