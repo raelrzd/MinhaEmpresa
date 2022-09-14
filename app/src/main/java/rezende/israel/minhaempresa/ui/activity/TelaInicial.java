@@ -1,16 +1,16 @@
 package rezende.israel.minhaempresa.ui.activity;
 
+import android.content.Intent;
+import android.os.Bundle;
+import android.view.View;
+import android.widget.RatingBar;
+import android.widget.TextView;
+
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.RecyclerView;
 
-import android.content.Intent;
-import android.os.Bundle;
-import android.view.View;
-
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
-
-import java.util.List;
 
 import rezende.israel.minhaempresa.R;
 import rezende.israel.minhaempresa.dao.ColaboradoresDAO;
@@ -22,6 +22,13 @@ public class TelaInicial extends AppCompatActivity {
     public static final String TITULO_APPBAR = "Minha Empresa";
     private ListaColaboradoresAdapter adapter;
     private ColaboradoresDAO dao;
+    private TextView totalComercial;
+    private TextView totalDev;
+    private TextView totalSuporte;
+    private TextView totalAdmin;
+    private TextView totalColaboradores;
+    private RatingBar mediaStars;
+    private TextView mediaText;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -31,18 +38,33 @@ public class TelaInicial extends AppCompatActivity {
         configuraFabNovoColaborador();
 
         dao = new ColaboradoresDAO();
-        dao.insere(new Colaborador("Israel", "Rezende", "29/03/2001"));
-
         RecyclerView listaColaboradoresRecycler = findViewById(R.id.recycleview);
         adapter = new ListaColaboradoresAdapter(dao.todos(), this);
         listaColaboradoresRecycler.setAdapter(adapter);
 
+        totalComercial = findViewById(R.id.totalComercial);
+        totalDev = findViewById(R.id.totalDev);
+        totalSuporte = findViewById(R.id.totalSuporte);
+        totalAdmin = findViewById(R.id.totalAdmin);
+        totalColaboradores = findViewById(R.id.totalColaboradores);
+        mediaStars = findViewById(R.id.ratingBar2);
+        mediaText = findViewById(R.id.textView10);
+
+        preencheTotalDeColaboradores(totalComercial, totalDev, totalSuporte, totalAdmin);
+    }
+
+    private void preencheTotalDeColaboradores(TextView totalComercial, TextView totalDev, TextView totalSuporte, TextView totalAdmin) {
+        totalComercial.setText(ColaboradoresDAO.getComercialDAO());
+        totalDev.setText(ColaboradoresDAO.getDesenvolvimentoDAO());
+        totalSuporte.setText(ColaboradoresDAO.getSuporteDAO());
+        totalAdmin.setText(ColaboradoresDAO.getAdministrativoDAO());
+        totalColaboradores.setText("Colaboradores "+dao.todos().size());
     }
 
     @Override
     protected void onActivityResult(int requestCode, int resultCode, @Nullable Intent data) {
-        if(requestCode == 50){
-            if(resultCode == RESULT_OK){
+        if (requestCode == 50) {
+            if (resultCode == RESULT_OK) {
                 if (data.hasExtra("colaborador")) {
                     Colaborador colaborador = (Colaborador) data.getSerializableExtra("colaborador");
                     adapter.insere(colaborador);
@@ -54,11 +76,11 @@ public class TelaInicial extends AppCompatActivity {
 
     @Override
     protected void onResume() {
-        Intent intent = getIntent();
-
+        preencheTotalDeColaboradores(totalComercial, totalDev, totalSuporte, totalAdmin);
+        mediaStars.setRating((float) dao.retornaMedia());
+        mediaText.setText(dao.retornaMediaString());
         super.onResume();
     }
-
 
     private void configuraFabNovoColaborador() {
         FloatingActionButton FabNovoColaborador = findViewById(R.id.floatingActionButton3);
