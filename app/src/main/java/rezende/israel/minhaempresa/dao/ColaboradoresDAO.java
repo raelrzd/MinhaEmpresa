@@ -16,6 +16,7 @@ public class ColaboradoresDAO {
 
     public void insere(Colaborador colaborador){
         ColaboradoresDAO.colaboradores.add(colaborador);
+
     }
 
 

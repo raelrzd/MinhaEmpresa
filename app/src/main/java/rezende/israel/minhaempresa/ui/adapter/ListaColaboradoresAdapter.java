@@ -43,6 +43,11 @@ public class ListaColaboradoresAdapter extends RecyclerView.Adapter<ListaColabor
         return colaboradores.size();
     }
 
+    public void insere(Colaborador colaborador) {
+        colaboradores.add(colaborador);
+        notifyDataSetChanged();
+    }
+
     static class ColaboradorViewHolder extends RecyclerView.ViewHolder {
 
         private final TextView nome;

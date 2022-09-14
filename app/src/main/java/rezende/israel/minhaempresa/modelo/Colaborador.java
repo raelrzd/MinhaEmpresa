@@ -1,6 +1,8 @@
 package rezende.israel.minhaempresa.modelo;
 
-public class Colaborador {
+import java.io.Serializable;
+
+public class Colaborador implements Serializable {
     private final String nome;
     private final String sobrenome;
     private final String data;
