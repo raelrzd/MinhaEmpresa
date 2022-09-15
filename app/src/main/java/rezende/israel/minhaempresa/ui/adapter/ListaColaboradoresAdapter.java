@@ -9,6 +9,7 @@ import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
+import java.util.Collections;
 import java.util.List;
 
 import rezende.israel.minhaempresa.R;
@@ -46,6 +47,16 @@ public class ListaColaboradoresAdapter extends RecyclerView.Adapter<ListaColabor
     public void insere(Colaborador colaborador) {
         colaboradores.add(colaborador);
         notifyDataSetChanged();
+    }
+
+    public void remove(int posicao) {
+        colaboradores.remove(posicao);
+        notifyDataSetChanged();
+    }
+
+    public void trocaColaborador(int posicaoInicial, int posicaoFinal) {
+        Collections.swap(colaboradores,posicaoInicial,posicaoFinal);
+        notifyItemMoved(posicaoInicial,posicaoFinal);
     }
 
     static class ColaboradorViewHolder extends RecyclerView.ViewHolder {

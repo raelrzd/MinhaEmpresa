@@ -2,12 +2,12 @@ package rezende.israel.minhaempresa.ui.activity;
 
 import android.content.Intent;
 import android.os.Bundle;
-import android.view.View;
 import android.widget.RatingBar;
 import android.widget.TextView;
 
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.recyclerview.widget.ItemTouchHelper;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
@@ -15,6 +15,7 @@ import com.google.android.material.floatingactionbutton.FloatingActionButton;
 import rezende.israel.minhaempresa.R;
 import rezende.israel.minhaempresa.dao.ColaboradoresDAO;
 import rezende.israel.minhaempresa.modelo.Colaborador;
+import rezende.israel.minhaempresa.recyclerciew.helper.callback.ColaboradorItemTouchHelper;
 import rezende.israel.minhaempresa.ui.adapter.ListaColaboradoresAdapter;
 
 public class TelaInicial extends AppCompatActivity {
@@ -51,6 +52,12 @@ public class TelaInicial extends AppCompatActivity {
         mediaText = findViewById(R.id.textView10);
 
         preencheTotalDeColaboradores(totalComercial, totalDev, totalSuporte, totalAdmin);
+
+
+//        ItemTouchHelper itemTouchHelper = new ItemTouchHelper(new ColaboradorItemTouchHelper(adapter));
+//        itemTouchHelper.attachToRecyclerView(listaColaboradoresRecycler);
+
+
     }
 
     private void preencheTotalDeColaboradores(TextView totalComercial, TextView totalDev, TextView totalSuporte, TextView totalAdmin) {

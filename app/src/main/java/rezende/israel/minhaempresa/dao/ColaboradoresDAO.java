@@ -1,9 +1,11 @@
 package rezende.israel.minhaempresa.dao;
 
 import java.util.ArrayList;
+import java.util.Collections;
 import java.util.List;
 
 import rezende.israel.minhaempresa.modelo.Colaborador;
+import rezende.israel.minhaempresa.ui.adapter.ListaColaboradoresAdapter;
 
 public class ColaboradoresDAO {
 
@@ -74,5 +76,13 @@ public class ColaboradoresDAO {
         ColaboradoresDAO.colaboradores.add(colaborador);
     }
 
+    public void removeColaborador(int posicao){
+        colaboradores.remove(posicao);
 
+    }
+
+
+    public void troca(int posicaoInicial, int posicaoFinal) {
+        Collections.swap(colaboradores,posicaoInicial,posicaoFinal);
+    }
 }
