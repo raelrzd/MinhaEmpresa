@@ -6,7 +6,7 @@
     android:layout_height="50dp">
 
     <TextView
-        android:id="@+id/textView15"
+        android:id="@+id/textView_itemColaborador_nome"
         android:layout_width="0dp"
         android:layout_height="0dp"
         android:layout_marginStart="15dp"
@@ -28,5 +28,5 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView15" />
+        app:layout_constraintTop_toBottomOf="@+id/textView_itemColaborador_nome" />
 </androidx.constraintlayout.widget.ConstraintLayout>

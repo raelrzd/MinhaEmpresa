@@ -1,11 +1,9 @@
 package rezende.israel.minhaempresa.dao;
 
 import java.util.ArrayList;
-import java.util.Collections;
 import java.util.List;
 
 import rezende.israel.minhaempresa.modelo.Colaborador;
-import rezende.israel.minhaempresa.ui.adapter.ListaColaboradoresAdapter;
 
 public class ColaboradoresDAO {
 
@@ -16,24 +14,25 @@ public class ColaboradoresDAO {
     private static int administrativoDAO = 0;
     private final static ArrayList<Double> mediaColaboradores = new ArrayList<>();
 
-    public void adicionaAvaliacao(double valor){
+
+    public void adicionaAvaliacao(double valor) {
         mediaColaboradores.add(valor);
     }
 
-    public double retornaMedia(){
+    public double retornaMedia() {
         double totalSum = 0;
         double media = 0;
         int n = mediaColaboradores.size();
-        for (int i=0; i<n;i++){
-            totalSum+=mediaColaboradores.get(i);
-            media = (totalSum/n);
+        for (int i = 0; i < n; i++) {
+            totalSum += mediaColaboradores.get(i);
+            media = (totalSum / n);
         }
         return media;
     }
 
-    public String retornaMediaString(){
+    public String retornaMediaString() {
         String valor = String.valueOf(retornaMedia());
-        return valor.substring(0,3);
+        return valor.substring(0, 3);
     }
 
     public void addComercial() {
@@ -76,13 +75,4 @@ public class ColaboradoresDAO {
         ColaboradoresDAO.colaboradores.add(colaborador);
     }
 
-    public void removeColaborador(int posicao){
-        colaboradores.remove(posicao);
-
-    }
-
-
-    public void troca(int posicaoInicial, int posicaoFinal) {
-        Collections.swap(colaboradores,posicaoInicial,posicaoFinal);
-    }
 }

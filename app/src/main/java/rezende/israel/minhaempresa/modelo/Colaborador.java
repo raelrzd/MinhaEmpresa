@@ -5,12 +5,10 @@ import java.io.Serializable;
 public class Colaborador implements Serializable {
     private final String nome;
     private final String sobrenome;
-    private final String data;
 
-    public Colaborador(String nome, String sobrenome, String data) {
+    public Colaborador(String nome, String sobrenome) {
         this.nome = nome;
         this.sobrenome = sobrenome;
-        this.data = data;
     }
 
     public String getNome() {
@@ -19,9 +17,5 @@ public class Colaborador implements Serializable {
 
     public String getSobrenome() {
         return sobrenome;
-    }
-
-    public String getData() {
-        return data;
     }
 }

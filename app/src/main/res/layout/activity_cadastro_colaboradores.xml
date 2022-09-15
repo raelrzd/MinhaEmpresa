@@ -7,122 +7,123 @@
     tools:context=".ui.activity.CadastroColaboradoresActivity">
 
     <EditText
-        android:id="@+id/editTextTextPersonName"
+        android:id="@+id/editText_form_nome"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
         android:layout_marginTop="45dp"
         android:layout_marginEnd="16dp"
         android:ems="10"
-        android:hint="Nome"
-        android:inputType="textPersonName"
+        android:hint="@string/nome"
+        android:inputType="textCapWords"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <EditText
-        android:id="@+id/editTextTextPersonName2"
+        android:id="@+id/editText_form_sobrenome"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
         android:layout_marginTop="30dp"
         android:layout_marginEnd="16dp"
         android:ems="10"
-        android:hint="Sobrenome"
-        android:inputType="textPersonName"
+        android:hint="@string/sobrenome"
+        android:inputType="textCapWords"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editTextTextPersonName" />
+        app:layout_constraintTop_toBottomOf="@+id/editText_form_nome" />
 
     <TextView
-        android:id="@+id/textView11"
+        android:id="@+id/textView_form_cargo"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
         android:layout_marginTop="30dp"
         android:layout_marginEnd="16dp"
-        android:text="Cargo"
+        android:text="@string/cargo"
         android:textSize="20sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/button2" />
+        app:layout_constraintTop_toBottomOf="@+id/editText_form_data_nascimento" />
 
     <Spinner
+        android:id="@+id/spinner_form"
         style=""
-        android:id="@+id/spinner"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="25dp"
         android:background="#ebebeb"
         android:paddingVertical="18dp"
         android:popupBackground="#ebebeb"
-        app:layout_constraintEnd_toEndOf="@+id/textView11"
-        app:layout_constraintStart_toStartOf="@+id/textView11"
-        app:layout_constraintTop_toBottomOf="@+id/textView11" />
+        app:layout_constraintEnd_toEndOf="@+id/textView_form_cargo"
+        app:layout_constraintStart_toStartOf="@+id/textView_form_cargo"
+        app:layout_constraintTop_toBottomOf="@+id/textView_form_cargo" />
 
     <RatingBar
-        android:id="@+id/ratingBar"
+        android:id="@+id/ratingBar_form"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="12dp"
-        android:progressBackgroundTint="#48575757"
         android:numStars="5"
-        android:stepSize="1.0"
-        android:rating="1.0"
+        android:progressBackgroundTint="#48575757"
         android:progressTint="#E4E14B"
+        android:rating="1.0"
         android:secondaryProgressTint="#E4E14B"
-        app:layout_constraintEnd_toEndOf="@+id/textView12"
-        app:layout_constraintStart_toStartOf="@+id/textView12"
-        app:layout_constraintTop_toBottomOf="@+id/textView12" />
+        android:stepSize="1.0"
+        app:layout_constraintEnd_toEndOf="@+id/textView_form_nivel_experiencia"
+        app:layout_constraintStart_toStartOf="@+id/textView_form_nivel_experiencia"
+        app:layout_constraintTop_toBottomOf="@+id/textView_form_nivel_experiencia" />
 
     <TextView
-        android:id="@+id/textView12"
+        android:id="@+id/textView_form_nivel_experiencia"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="50dp"
-        android:text="Nivel de Expêriencia"
+        android:text="@string/nivel_de_experiencia"
         android:textSize="20sp"
-        app:layout_constraintEnd_toEndOf="@+id/spinner"
-        app:layout_constraintStart_toStartOf="@+id/spinner"
-        app:layout_constraintTop_toBottomOf="@+id/spinner" />
+        app:layout_constraintEnd_toEndOf="@+id/spinner_form"
+        app:layout_constraintStart_toStartOf="@+id/spinner_form"
+        app:layout_constraintTop_toBottomOf="@+id/spinner_form" />
 
     <ImageView
-        android:id="@+id/imageView7"
+        android:id="@+id/imageView_form_seta"
         android:layout_width="28dp"
         android:layout_height="22dp"
         android:layout_marginEnd="8dp"
-        app:layout_constraintBottom_toBottomOf="@+id/spinner"
-        app:layout_constraintEnd_toEndOf="@+id/spinner"
-        app:layout_constraintTop_toTopOf="@+id/spinner"
+        app:layout_constraintBottom_toBottomOf="@+id/spinner_form"
+        app:layout_constraintEnd_toEndOf="@+id/spinner_form"
+        app:layout_constraintTop_toTopOf="@+id/spinner_form"
         app:srcCompat="@drawable/down_arrow" />
 
     <Button
-        android:id="@+id/button"
+        android:id="@+id/button_form_salvar"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="10dp"
         android:layout_marginEnd="10dp"
         android:layout_marginBottom="10dp"
-        android:text="SALVAR"
-        android:textSize="20sp"
         android:padding="10dp"
+        android:text="@string/salvar"
+        android:textSize="20sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent" />
 
     <EditText
-        android:id="@+id/button2"
+        android:id="@+id/editText_form_data_nascimento"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="30dp"
-        android:hint="Data de Nascimento"
-        android:onClick="showDatePickerDialog"
         android:focusable="false"
+        android:hint="@string/data_de_nascimento"
+        android:onClick="showDatePickerDialog"
         android:textAlignment="textStart"
         android:textColor="@color/black"
-        app:layout_constraintEnd_toEndOf="@+id/editTextTextPersonName2"
-        app:layout_constraintStart_toStartOf="@+id/editTextTextPersonName2"
-        app:layout_constraintTop_toBottomOf="@+id/editTextTextPersonName2" />
+        app:layout_constraintEnd_toEndOf="@+id/editText_form_sobrenome"
+        app:layout_constraintStart_toStartOf="@+id/editText_form_sobrenome"
+        app:layout_constraintTop_toBottomOf="@+id/editText_form_sobrenome"
+        tools:ignore="UsingOnClickInXml" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

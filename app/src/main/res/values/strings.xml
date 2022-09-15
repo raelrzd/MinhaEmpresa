@@ -1,3 +1,13 @@
 <resources>
     <string name="app_name">Minha Empresa</string>
+    <string name="nome">Nome</string>
+    <string name="sobrenome">Sobrenome</string>
+    <string name="cargo">Cargo</string>
+    <string name="nivel_de_experiencia">Nivel de Expêriencia</string>
+    <string name="salvar">SALVAR</string>
+    <string name="data_de_nascimento">Data de Nascimento</string>
+    <string name="comercial">Comercial</string>
+    <string name="desenvolvimento">Desenvolvimento</string>
+    <string name="suporte_t">Suporte T.</string>
+    <string name="administrativo">Administrativo</string>
 </resources>

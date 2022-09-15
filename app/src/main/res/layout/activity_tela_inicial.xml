@@ -5,7 +5,6 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
-
     <ScrollView
         android:id="@+id/scrollView"
         android:layout_width="match_parent"
@@ -17,73 +16,73 @@
             tools:context=".ui.activity.TelaInicial">
 
             <TextView
-                android:id="@+id/textView"
+                android:id="@+id/textView_telaInicial_comercial"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="8dp"
-                android:text="Comercial"
-                app:layout_constraintEnd_toEndOf="@+id/imageView2"
-                app:layout_constraintStart_toStartOf="@+id/imageView2"
-                app:layout_constraintTop_toBottomOf="@+id/imageView2" />
+                android:text="@string/comercial"
+                app:layout_constraintEnd_toEndOf="@+id/imageView_telaInicial_comercial"
+                app:layout_constraintStart_toStartOf="@+id/imageView_telaInicial_comercial"
+                app:layout_constraintTop_toBottomOf="@+id/imageView_telaInicial_comercial" />
 
             <ImageView
-                android:id="@+id/imageView2"
+                android:id="@+id/imageView_telaInicial_comercial"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="10dp"
-                app:layout_constraintEnd_toStartOf="@id/imageView3"
+                app:layout_constraintEnd_toStartOf="@id/imageView_telaInicial_dev"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent"
                 app:srcCompat="@drawable/money" />
 
             <ImageView
-                android:id="@+id/imageView3"
+                android:id="@+id/imageView_telaInicial_dev"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toEndOf="@+id/imageView2"
-                app:layout_constraintTop_toTopOf="@+id/imageView2"
+                app:layout_constraintStart_toEndOf="@+id/imageView_telaInicial_comercial"
+                app:layout_constraintTop_toTopOf="@+id/imageView_telaInicial_comercial"
                 app:srcCompat="@drawable/tela_de_computador" />
 
             <TextView
-                android:id="@+id/textView2"
+                android:id="@+id/textView_telaInicial_dev"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="8dp"
-                android:text="Desenvolvimento"
-                app:layout_constraintBottom_toBottomOf="@+id/textView"
-                app:layout_constraintEnd_toEndOf="@+id/imageView3"
-                app:layout_constraintStart_toStartOf="@+id/imageView3"
-                app:layout_constraintTop_toBottomOf="@+id/imageView3" />
+                android:text="@string/desenvolvimento"
+                app:layout_constraintBottom_toBottomOf="@+id/textView_telaInicial_comercial"
+                app:layout_constraintEnd_toEndOf="@+id/imageView_telaInicial_dev"
+                app:layout_constraintStart_toStartOf="@+id/imageView_telaInicial_dev"
+                app:layout_constraintTop_toBottomOf="@+id/imageView_telaInicial_dev" />
 
             <ImageView
-                android:id="@+id/imageView4"
+                android:id="@+id/imageView_telaInicial_suporte"
                 android:layout_width="101dp"
                 android:layout_height="101dp"
                 android:layout_marginTop="5dp"
-                app:layout_constraintEnd_toEndOf="@+id/imageView2"
-                app:layout_constraintStart_toStartOf="@+id/imageView2"
+                app:layout_constraintEnd_toEndOf="@+id/imageView_telaInicial_comercial"
+                app:layout_constraintStart_toStartOf="@+id/imageView_telaInicial_comercial"
                 app:layout_constraintTop_toBottomOf="@+id/totalComercial"
                 app:srcCompat="@drawable/telefone" />
 
             <TextView
-                android:id="@+id/textView3"
+                android:id="@+id/textView_telaInicial_suporte"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="10dp"
-                android:text="Suporte T."
-                app:layout_constraintEnd_toEndOf="@+id/imageView4"
-                app:layout_constraintStart_toStartOf="@+id/imageView4"
-                app:layout_constraintTop_toBottomOf="@+id/imageView4" />
+                android:text="@string/suporte_t"
+                app:layout_constraintEnd_toEndOf="@+id/imageView_telaInicial_suporte"
+                app:layout_constraintStart_toStartOf="@+id/imageView_telaInicial_suporte"
+                app:layout_constraintTop_toBottomOf="@+id/imageView_telaInicial_suporte" />
 
             <TextView
                 android:id="@+id/totalComercial"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:textSize="20sp"
-                app:layout_constraintEnd_toEndOf="@+id/textView"
-                app:layout_constraintStart_toStartOf="@+id/textView"
-                app:layout_constraintTop_toBottomOf="@+id/textView"
+                app:layout_constraintEnd_toEndOf="@+id/textView_telaInicial_comercial"
+                app:layout_constraintStart_toStartOf="@+id/textView_telaInicial_comercial"
+                app:layout_constraintTop_toBottomOf="@+id/textView_telaInicial_comercial"
                 tools:text="20" />
 
             <TextView
@@ -92,41 +91,41 @@
                 android:layout_height="wrap_content"
                 android:textSize="20sp"
                 app:layout_constraintBottom_toBottomOf="@+id/totalComercial"
-                app:layout_constraintEnd_toEndOf="@+id/textView2"
-                app:layout_constraintStart_toStartOf="@+id/textView2"
-                app:layout_constraintTop_toBottomOf="@+id/textView2"
+                app:layout_constraintEnd_toEndOf="@+id/textView_telaInicial_dev"
+                app:layout_constraintStart_toStartOf="@+id/textView_telaInicial_dev"
+                app:layout_constraintTop_toBottomOf="@+id/textView_telaInicial_dev"
                 tools:text="35" />
 
             <ImageView
-                android:id="@+id/imageView5"
+                android:id="@+id/imageView_telaInicial_admin"
                 android:layout_width="129dp"
                 android:layout_height="117dp"
                 android:layout_marginTop="8dp"
-                app:layout_constraintBottom_toBottomOf="@+id/imageView4"
-                app:layout_constraintEnd_toEndOf="@+id/imageView3"
-                app:layout_constraintStart_toStartOf="@+id/imageView3"
+                app:layout_constraintBottom_toBottomOf="@+id/imageView_telaInicial_suporte"
+                app:layout_constraintEnd_toEndOf="@+id/imageView_telaInicial_dev"
+                app:layout_constraintStart_toStartOf="@+id/imageView_telaInicial_dev"
                 app:layout_constraintTop_toBottomOf="@+id/totalDev"
                 app:srcCompat="@drawable/group" />
 
             <TextView
-                android:id="@+id/textView6"
+                android:id="@+id/textView_telaInicial_admin"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="4dp"
-                android:text="Administrativo"
-                app:layout_constraintBottom_toBottomOf="@+id/textView3"
-                app:layout_constraintEnd_toEndOf="@+id/imageView5"
-                app:layout_constraintStart_toStartOf="@+id/imageView5"
-                app:layout_constraintTop_toBottomOf="@+id/imageView5" />
+                android:text="@string/administrativo"
+                app:layout_constraintBottom_toBottomOf="@+id/textView_telaInicial_suporte"
+                app:layout_constraintEnd_toEndOf="@+id/imageView_telaInicial_admin"
+                app:layout_constraintStart_toStartOf="@+id/imageView_telaInicial_admin"
+                app:layout_constraintTop_toBottomOf="@+id/imageView_telaInicial_admin" />
 
             <TextView
                 android:id="@+id/totalSuporte"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:textSize="20sp"
-                app:layout_constraintEnd_toEndOf="@+id/textView3"
-                app:layout_constraintStart_toStartOf="@+id/textView3"
-                app:layout_constraintTop_toBottomOf="@+id/textView3"
+                app:layout_constraintEnd_toEndOf="@+id/textView_telaInicial_suporte"
+                app:layout_constraintStart_toStartOf="@+id/textView_telaInicial_suporte"
+                app:layout_constraintTop_toBottomOf="@+id/textView_telaInicial_suporte"
                 tools:text="13" />
 
             <TextView
@@ -135,13 +134,13 @@
                 android:layout_height="wrap_content"
                 android:textSize="20sp"
                 app:layout_constraintBottom_toBottomOf="@+id/totalSuporte"
-                app:layout_constraintEnd_toEndOf="@+id/textView6"
-                app:layout_constraintStart_toStartOf="@+id/textView6"
-                app:layout_constraintTop_toBottomOf="@+id/textView6"
+                app:layout_constraintEnd_toEndOf="@+id/textView_telaInicial_admin"
+                app:layout_constraintStart_toStartOf="@+id/textView_telaInicial_admin"
+                app:layout_constraintTop_toBottomOf="@+id/textView_telaInicial_admin"
                 tools:text="7" />
 
             <View
-                android:id="@+id/imageView6"
+                android:id="@+id/imageView"
                 android:layout_width="0dp"
                 android:layout_height="80dp"
                 android:layout_marginTop="5dp"
@@ -156,34 +155,33 @@
                 android:layout_height="wrap_content"
                 android:layout_marginTop="4dp"
                 android:textSize="20sp"
-                app:layout_constraintBottom_toBottomOf="@+id/imageView6"
+                app:layout_constraintBottom_toBottomOf="@+id/imageView"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="@+id/imageView6"
-                app:layout_constraintTop_toTopOf="@+id/imageView6"
+                app:layout_constraintStart_toStartOf="@+id/imageView"
+                app:layout_constraintTop_toTopOf="@+id/imageView"
                 app:layout_constraintVertical_bias="0.0"
                 tools:text="Colaboradores X" />
 
             <RatingBar
-                android:id="@+id/ratingBar2"
+                android:id="@+id/ratingBar_telaInicial_media"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:isIndicator="true"
                 android:progressTint="#E4E14B"
-                app:layout_constraintEnd_toEndOf="@+id/imageView6"
-                app:layout_constraintStart_toStartOf="@+id/imageView6"
+                app:layout_constraintEnd_toEndOf="@+id/imageView"
+                app:layout_constraintStart_toStartOf="@+id/imageView"
                 app:layout_constraintTop_toBottomOf="@+id/totalColaboradores" />
 
-
             <TextView
-                android:id="@+id/textView10"
+                android:id="@+id/textView_telaInicial_media"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="10dp"
                 android:layout_marginBottom="13dp"
-                app:layout_constraintBottom_toBottomOf="@+id/imageView6"
-                app:layout_constraintEnd_toEndOf="@+id/imageView6"
+                app:layout_constraintBottom_toBottomOf="@+id/imageView"
+                app:layout_constraintEnd_toEndOf="@+id/imageView"
                 app:layout_constraintHorizontal_bias="0.0"
-                app:layout_constraintStart_toEndOf="@+id/ratingBar2"
+                app:layout_constraintStart_toEndOf="@+id/ratingBar_telaInicial_media"
                 tools:text=" 3.0" />
 
             <androidx.recyclerview.widget.RecyclerView
@@ -195,15 +193,15 @@
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintHorizontal_bias="0.0"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@id/imageView6"
+                app:layout_constraintTop_toBottomOf="@id/imageView"
                 app:layout_constraintVertical_bias="1.0"
                 tools:listitem="@layout/item_colaborador" />
-
         </androidx.constraintlayout.widget.ConstraintLayout>
+
     </ScrollView>
 
     <com.google.android.material.floatingactionbutton.FloatingActionButton
-        android:id="@+id/floatingActionButton3"
+        android:id="@+id/Fab_telaInicial_add_colaborador"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_margin="10dp"
@@ -213,4 +211,5 @@
         app:srcCompat="@android:drawable/ic_input_add"
         app:tint="@android:color/white"
         tools:ignore="SpeakableTextPresentCheck" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>

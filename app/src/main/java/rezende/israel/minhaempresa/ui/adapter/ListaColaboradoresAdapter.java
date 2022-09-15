@@ -9,7 +9,6 @@ import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
-import java.util.Collections;
 import java.util.List;
 
 import rezende.israel.minhaempresa.R;
@@ -36,7 +35,6 @@ public class ListaColaboradoresAdapter extends RecyclerView.Adapter<ListaColabor
     public void onBindViewHolder(@NonNull ListaColaboradoresAdapter.ColaboradorViewHolder holder, int position) {
         Colaborador colaborador = colaboradores.get(position);
         holder.preencheCampo(colaborador);
-
     }
 
     @Override
@@ -49,30 +47,18 @@ public class ListaColaboradoresAdapter extends RecyclerView.Adapter<ListaColabor
         notifyDataSetChanged();
     }
 
-    public void remove(int posicao) {
-        colaboradores.remove(posicao);
-        notifyDataSetChanged();
-    }
-
-    public void trocaColaborador(int posicaoInicial, int posicaoFinal) {
-        Collections.swap(colaboradores,posicaoInicial,posicaoFinal);
-        notifyItemMoved(posicaoInicial,posicaoFinal);
-    }
-
     static class ColaboradorViewHolder extends RecyclerView.ViewHolder {
 
         private final TextView nome;
 
         public ColaboradorViewHolder(@NonNull View itemView) {
             super(itemView);
-            nome = itemView.findViewById(R.id.textView15);
+            nome = itemView.findViewById(R.id.textView_itemColaborador_nome);
         }
 
         public void preencheCampo(Colaborador colaborador) {
             String nomeCompleto = colaborador.getNome() + " " + colaborador.getSobrenome();
             nome.setText(nomeCompleto);
         }
-
     }
-
 }
