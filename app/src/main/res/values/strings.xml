@@ -10,4 +10,6 @@
     <string name="desenvolvimento">Desenvolvimento</string>
     <string name="suporte_t">Suporte T.</string>
     <string name="administrativo">Administrativo</string>
+    <string name="telefone_que_representa_o_suporte_tec">Telefone que representa o Suporte Tec</string>
+    <string name="botao_adicionar_colaborador">Botao adicionar colaborador</string>
 </resources>

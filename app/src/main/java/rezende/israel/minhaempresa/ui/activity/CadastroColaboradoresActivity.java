@@ -27,6 +27,7 @@ import rezende.israel.minhaempresa.modelo.Colaborador;
 public class CadastroColaboradoresActivity extends AppCompatActivity implements DatePickerDialog.OnDateSetListener {
 
     public static final String TITULO_APPBAR = "Minha Empresa";
+    public static final String CHAVE_COLABORADOR = "colaborador";
     private EditText dataNasc;
     private ColaboradoresDAO dao;
     private RatingBar estrelas;
@@ -59,7 +60,7 @@ public class CadastroColaboradoresActivity extends AppCompatActivity implements 
 
     private void enviaDadosParaActivityInicial(Colaborador novoColaborador) {
         Intent salvaColaborador = new Intent();
-        salvaColaborador.putExtra("colaborador", novoColaborador);
+        salvaColaborador.putExtra(CHAVE_COLABORADOR, novoColaborador);
         setResult(RESULT_OK, salvaColaborador);
     }
 

@@ -29,7 +29,7 @@
                 android:id="@+id/imageView_telaInicial_comercial"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="10dp"
+                android:layout_marginTop="20dp"
                 app:layout_constraintEnd_toStartOf="@id/imageView_telaInicial_dev"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent"
@@ -37,12 +37,13 @@
 
             <ImageView
                 android:id="@+id/imageView_telaInicial_dev"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                android:layout_width="105dp"
+                android:layout_height="80dp"
+                app:layout_constraintBottom_toBottomOf="@+id/imageView_telaInicial_comercial"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toEndOf="@+id/imageView_telaInicial_comercial"
                 app:layout_constraintTop_toTopOf="@+id/imageView_telaInicial_comercial"
-                app:srcCompat="@drawable/tela_de_computador" />
+                app:srcCompat="@drawable/imac" />
 
             <TextView
                 android:id="@+id/textView_telaInicial_dev"
@@ -57,13 +58,13 @@
 
             <ImageView
                 android:id="@+id/imageView_telaInicial_suporte"
-                android:layout_width="101dp"
-                android:layout_height="101dp"
+                android:layout_width="70dp"
+                android:layout_height="74dp"
                 android:layout_marginTop="5dp"
                 app:layout_constraintEnd_toEndOf="@+id/imageView_telaInicial_comercial"
                 app:layout_constraintStart_toStartOf="@+id/imageView_telaInicial_comercial"
                 app:layout_constraintTop_toBottomOf="@+id/totalComercial"
-                app:srcCompat="@drawable/telefone" />
+                app:srcCompat="@drawable/call" />
 
             <TextView
                 android:id="@+id/textView_telaInicial_suporte"
@@ -98,8 +99,8 @@
 
             <ImageView
                 android:id="@+id/imageView_telaInicial_admin"
-                android:layout_width="129dp"
-                android:layout_height="117dp"
+                android:layout_width="99dp"
+                android:layout_height="85dp"
                 android:layout_marginTop="8dp"
                 app:layout_constraintBottom_toBottomOf="@+id/imageView_telaInicial_suporte"
                 app:layout_constraintEnd_toEndOf="@+id/imageView_telaInicial_dev"
@@ -144,7 +145,7 @@
                 android:layout_width="0dp"
                 android:layout_height="80dp"
                 android:layout_marginTop="5dp"
-                android:background="#c3c3c3"
+                android:background="#ebebeb"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/totalSuporte" />
@@ -167,6 +168,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:isIndicator="true"
+                android:max="5"
                 android:progressTint="#E4E14B"
                 android:secondaryProgressTint="#E4E14B"
                 app:layout_constraintEnd_toEndOf="@+id/imageView"
