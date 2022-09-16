@@ -8,9 +8,7 @@
     <ScrollView
         android:id="@+id/scrollView"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        app:layout_constraintBottom_toTopOf="@id/recycleview"
-        app:layout_constraintTop_toTopOf="parent">
+        android:layout_height="match_parent">
 
         <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
@@ -156,52 +154,64 @@
                 android:id="@+id/totalColaboradores"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="4dp"
-                android:textSize="20sp"
+                android:layout_marginTop="10dp"
+                android:textSize="18sp"
+                android:textStyle="normal"
                 app:layout_constraintBottom_toBottomOf="@+id/imageView"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="@+id/imageView"
                 app:layout_constraintTop_toTopOf="@+id/imageView"
                 app:layout_constraintVertical_bias="0.0"
-                tools:text="Colaboradores X" />
-
-            <RatingBar
-                android:id="@+id/ratingBar_telaInicial_media"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:isIndicator="true"
-                android:max="5"
-                android:progressTint="#E4E14B"
-                android:secondaryProgressTint="#E4E14B"
-                app:layout_constraintEnd_toEndOf="@+id/imageView"
-                app:layout_constraintStart_toStartOf="@+id/imageView"
-                app:layout_constraintTop_toBottomOf="@+id/totalColaboradores" />
+                tools:text="Colaboradores 317" />
 
             <TextView
                 android:id="@+id/textView_telaInicial_media"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginStart="10dp"
-                android:layout_marginBottom="13dp"
-                app:layout_constraintBottom_toBottomOf="@+id/imageView"
+                android:layout_marginBottom="12dp"
+                app:layout_constraintBottom_toBottomOf="@+id/ratingBar_telaInicial_media"
                 app:layout_constraintEnd_toEndOf="@+id/imageView"
                 app:layout_constraintHorizontal_bias="0.0"
                 app:layout_constraintStart_toEndOf="@+id/ratingBar_telaInicial_media"
                 tools:text=" 3.0" />
+
+            <RatingBar
+                android:id="@+id/ratingBar_telaInicial_media"
+                style="?android:attr/ratingBarStyleIndicator"
+                android:layout_width="178dp"
+                android:layout_height="40dp"
+                android:layout_marginStart="15dp"
+                android:max="5"
+                android:numStars="5"
+                android:progressBackgroundTint="#959494"
+                android:progressTint="#e4e14b"
+                android:rating="3.5"
+                android:scaleX=".9"
+                android:scaleY=".9"
+                android:secondaryProgressTint="#e4e14b"
+                android:transformPivotX="30dp"
+                android:transformPivotY="20dp"
+                app:layout_constraintEnd_toEndOf="@+id/totalColaboradores"
+                app:layout_constraintStart_toStartOf="@+id/totalColaboradores"
+                app:layout_constraintTop_toBottomOf="@+id/totalColaboradores" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/recycleview"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/imageView"
+                app:layout_constraintVertical_bias="1.0"
+                tools:listitem="@layout/item_colaborador" />
+
         </androidx.constraintlayout.widget.ConstraintLayout>
 
     </ScrollView>
 
-    <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/recycleview"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/scrollView"
-        tools:itemCount="1"
-        tools:listitem="@layout/item_colaborador" />
 
     <com.google.android.material.floatingactionbutton.FloatingActionButton
         android:id="@+id/Fab_telaInicial_add_colaborador"

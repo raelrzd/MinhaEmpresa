@@ -41,6 +41,7 @@ public class TelaInicial extends AppCompatActivity {
         configuraAdapter();
         realizaByIdDasViews();
         preencheTotalDeColaboradores();
+
     }
 
     private void realizaByIdDasViews() {

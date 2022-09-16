@@ -12,4 +12,5 @@
     <string name="administrativo">Administrativo</string>
     <string name="telefone_que_representa_o_suporte_tec">Telefone que representa o Suporte Tec</string>
     <string name="botao_adicionar_colaborador">Botao adicionar colaborador</string>
+    <string name="seta_spinner">Seta Spinner</string>
 </resources>
