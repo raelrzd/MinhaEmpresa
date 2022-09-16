@@ -32,7 +32,8 @@
                 android:minHeight="48dp"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent" />
+                app:layout_constraintTop_toTopOf="parent"
+                android:autofillHints="name"/>
 
             <EditText
                 android:id="@+id/editText_form_sobrenome"
@@ -41,6 +42,7 @@
                 android:layout_marginStart="16dp"
                 android:layout_marginTop="30dp"
                 android:layout_marginEnd="16dp"
+                android:autofillHints="name"
                 android:ems="10"
                 android:hint="@string/sobrenome"
                 android:inputType="textCapWords"
@@ -48,7 +50,8 @@
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintHorizontal_bias="1.0"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/editText_form_nome" />
+                app:layout_constraintTop_toBottomOf="@+id/editText_form_nome"
+                tools:ignore="TextContrastCheck" />
 
             <TextView
                 android:id="@+id/textView_form_cargo"
@@ -121,7 +124,7 @@
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="10dp"
-                android:layout_marginTop="30dp"
+                android:layout_marginTop="40dp"
                 android:layout_marginEnd="10dp"
                 android:layout_marginBottom="10dp"
                 android:padding="10dp"
@@ -148,7 +151,8 @@
                 app:layout_constraintStart_toStartOf="@+id/editText_form_sobrenome"
                 app:layout_constraintTop_toBottomOf="@+id/editText_form_sobrenome"
                 tools:ignore="UsingOnClickInXml,TextContrastCheck"
-                android:inputType="date"/>
+                android:inputType="date"
+                android:importantForAutofill="no" />
 
         </androidx.constraintlayout.widget.ConstraintLayout>
 

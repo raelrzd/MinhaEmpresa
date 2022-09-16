@@ -13,4 +13,8 @@
     <string name="telefone_que_representa_o_suporte_tec">Telefone que representa o Suporte Tec</string>
     <string name="botao_adicionar_colaborador">Botao adicionar colaborador</string>
     <string name="seta_spinner">Seta Spinner</string>
+    <string name="notas_representando_o_comercial">Notas representando o comercial</string>
+    <string name="computador_representando_o_dev">Computador representando o Dev</string>
+    <string name="telefone_representando_o_suporte">Telefone representando o suporte</string>
+    <string name="grupo_de_pessoas_representando_o_admin">Grupo de pessoas representando o admin</string>
 </resources>

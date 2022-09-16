@@ -30,6 +30,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="20dp"
+                android:contentDescription="@string/notas_representando_o_comercial"
                 app:layout_constraintEnd_toStartOf="@id/imageView_telaInicial_dev"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent"
@@ -39,6 +40,7 @@
                 android:id="@+id/imageView_telaInicial_dev"
                 android:layout_width="105dp"
                 android:layout_height="80dp"
+                android:contentDescription="@string/computador_representando_o_dev"
                 app:layout_constraintBottom_toBottomOf="@+id/imageView_telaInicial_comercial"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toEndOf="@+id/imageView_telaInicial_comercial"
@@ -61,6 +63,7 @@
                 android:layout_width="70dp"
                 android:layout_height="74dp"
                 android:layout_marginTop="5dp"
+                android:contentDescription="@string/telefone_representando_o_suporte"
                 app:layout_constraintEnd_toEndOf="@+id/imageView_telaInicial_comercial"
                 app:layout_constraintStart_toStartOf="@+id/imageView_telaInicial_comercial"
                 app:layout_constraintTop_toBottomOf="@+id/totalComercial"
@@ -102,6 +105,7 @@
                 android:layout_width="99dp"
                 android:layout_height="85dp"
                 android:layout_marginTop="8dp"
+                android:contentDescription="@string/grupo_de_pessoas_representando_o_admin"
                 app:layout_constraintBottom_toBottomOf="@+id/imageView_telaInicial_suporte"
                 app:layout_constraintEnd_toEndOf="@+id/imageView_telaInicial_dev"
                 app:layout_constraintStart_toStartOf="@+id/imageView_telaInicial_dev"
@@ -173,6 +177,7 @@
                 app:layout_constraintEnd_toEndOf="@+id/imageView"
                 app:layout_constraintHorizontal_bias="0.0"
                 app:layout_constraintStart_toEndOf="@+id/ratingBar_telaInicial_media"
+                tools:ignore="TextContrastCheck"
                 tools:text=" 3.0" />
 
             <RatingBar
@@ -218,11 +223,12 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_margin="10dp"
+        android:contentDescription="@string/botao_adicionar_colaborador"
         app:backgroundTint="#e69b67"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:srcCompat="@android:drawable/ic_input_add"
         app:tint="@android:color/white"
-        tools:ignore="SpeakableTextPresentCheck" />
+        tools:ignore="SpeakableTextPresentCheck,ImageContrastCheck" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
