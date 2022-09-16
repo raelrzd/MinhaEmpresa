@@ -8,7 +8,9 @@
     <ScrollView
         android:id="@+id/scrollView"
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toTopOf="@id/recycleview"
+        app:layout_constraintTop_toTopOf="parent">
 
         <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
@@ -143,7 +145,7 @@
             <View
                 android:id="@+id/imageView"
                 android:layout_width="0dp"
-                android:layout_height="80dp"
+                android:layout_height="85dp"
                 android:layout_marginTop="5dp"
                 android:background="#ebebeb"
                 app:layout_constraintEnd_toEndOf="parent"
@@ -186,22 +188,20 @@
                 app:layout_constraintHorizontal_bias="0.0"
                 app:layout_constraintStart_toEndOf="@+id/ratingBar_telaInicial_media"
                 tools:text=" 3.0" />
-
-            <androidx.recyclerview.widget.RecyclerView
-                android:id="@+id/recycleview"
-                android:layout_width="0dp"
-                android:layout_height="match_parent"
-                app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.0"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@id/imageView"
-                app:layout_constraintVertical_bias="1.0"
-                tools:listitem="@layout/item_colaborador" />
         </androidx.constraintlayout.widget.ConstraintLayout>
 
     </ScrollView>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recycleview"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/scrollView"
+        tools:itemCount="1"
+        tools:listitem="@layout/item_colaborador" />
 
     <com.google.android.material.floatingactionbutton.FloatingActionButton
         android:id="@+id/Fab_telaInicial_add_colaborador"

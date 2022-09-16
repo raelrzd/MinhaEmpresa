@@ -31,6 +31,7 @@ public class TelaInicial extends AppCompatActivity {
     private RatingBar mediaStars;
     private TextView mediaText;
 
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -39,7 +40,7 @@ public class TelaInicial extends AppCompatActivity {
         configuraFabNovoColaborador();
         configuraAdapter();
         realizaByIdDasViews();
-        preencheTotalDeColaboradores(totalComercial, totalDev, totalSuporte, totalAdmin);
+        preencheTotalDeColaboradores();
     }
 
     private void realizaByIdDasViews() {
@@ -59,7 +60,7 @@ public class TelaInicial extends AppCompatActivity {
         listaColaboradoresRecycler.setAdapter(adapter);
     }
 
-    private void preencheTotalDeColaboradores(TextView totalComercial, TextView totalDev, TextView totalSuporte, TextView totalAdmin) {
+    private void preencheTotalDeColaboradores() {
         totalComercial.setText(ColaboradoresDAO.getComercialDAO());
         totalDev.setText(ColaboradoresDAO.getDesenvolvimentoDAO());
         totalSuporte.setText(ColaboradoresDAO.getSuporteDAO());
@@ -90,7 +91,7 @@ public class TelaInicial extends AppCompatActivity {
 
     @Override
     protected void onResume() {
-        preencheTotalDeColaboradores(totalComercial, totalDev, totalSuporte, totalAdmin);
+        preencheTotalDeColaboradores();
         preencheDadosMediaExperiencia();
         super.onResume();
     }
