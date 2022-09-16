@@ -108,7 +108,7 @@
                 app:layout_constraintEnd_toEndOf="@+id/imageView_telaInicial_dev"
                 app:layout_constraintStart_toStartOf="@+id/imageView_telaInicial_dev"
                 app:layout_constraintTop_toBottomOf="@+id/totalDev"
-                app:srcCompat="@drawable/group" />
+                app:srcCompat="@drawable/peoples1" />
 
             <TextView
                 android:id="@+id/textView_telaInicial_admin"
