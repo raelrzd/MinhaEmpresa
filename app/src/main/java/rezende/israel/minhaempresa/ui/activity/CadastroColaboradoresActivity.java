@@ -13,18 +13,21 @@ import android.widget.EditText;
 import android.widget.RatingBar;
 import android.widget.Spinner;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.fragment.app.DialogFragment;
+
+import java.util.Calendar;
+import java.util.Date;
+import java.util.GregorianCalendar;
 
 import rezende.israel.minhaempresa.R;
 import rezende.israel.minhaempresa.dao.ColaboradoresDAO;
-import rezende.israel.minhaempresa.datePicker.DatePickerFragment;
 import rezende.israel.minhaempresa.modelo.Colaborador;
 
 
-public class CadastroColaboradoresActivity extends AppCompatActivity implements DatePickerDialog.OnDateSetListener {
+public class CadastroColaboradoresActivity extends AppCompatActivity {
 
     public static final String TITULO_APPBAR = "Minha Empresa";
     public static final String CHAVE_COLABORADOR = "colaborador";
@@ -49,13 +52,21 @@ public class CadastroColaboradoresActivity extends AppCompatActivity implements 
         botaoSalvar.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Colaborador novoColaborador = criaNovoColaborador();
-                enviaDadosParaActivityInicial(novoColaborador);
-                validaCargo(dao, spinner);
-                dao.adicionaAvaliacao(valueOf(estrelas.getRating()));
-                finish();
+                if (validaSeTodosOsCamposForamPreenchidos()) {
+                    Toast.makeText(CadastroColaboradoresActivity.this, "Preencha todos os campos para prosseguir!! " + ("\u26A0"), Toast.LENGTH_LONG).show();
+                } else {
+                    Colaborador novoColaborador = criaNovoColaborador();
+                    enviaDadosParaActivityInicial(novoColaborador);
+                    validaCargo(dao, spinner);
+                    dao.adicionaAvaliacao(valueOf(estrelas.getRating()));
+                    finish();
+                }
             }
         });
+    }
+
+    private boolean validaSeTodosOsCamposForamPreenchidos() {
+        return nome.getText().toString().equals("") || sobrenome.getText().toString().equals("") || dataNasc.getText().toString().equals("") || nome.getText().toString().replaceAll(" ", "").isEmpty() || sobrenome.getText().toString().replaceAll(" ", "").isEmpty();
     }
 
     private void enviaDadosParaActivityInicial(Colaborador novoColaborador) {
@@ -103,13 +114,16 @@ public class CadastroColaboradoresActivity extends AppCompatActivity implements 
     }
 
     public void showDatePickerDialog(View view) {
-        DialogFragment newFragment = new DatePickerFragment(this);
-        newFragment.show(getSupportFragmentManager(), "datePicker");
+        Calendar mCalendar = new GregorianCalendar();
+        mCalendar.setTime(new Date());
+
+        new DatePickerDialog(this, R.style.my_dialog_theme, new DatePickerDialog.OnDateSetListener() {
+            @Override
+            public void onDateSet(DatePicker view, int ano, int mes, int dia) {
+                dataNasc.setText(dia + "/" + mes + "/" + ano);
+            }
+        }, mCalendar.get(Calendar.YEAR), mCalendar.get(Calendar.MONTH), mCalendar.get(Calendar.DAY_OF_MONTH)).show();
     }
 
-    @Override
-    public void onDateSet(DatePicker datePicker, int ano, int mes, int dia) {
-        dataNasc.setText(dia + "/" + mes + "/" + ano);
-    }
 }
 

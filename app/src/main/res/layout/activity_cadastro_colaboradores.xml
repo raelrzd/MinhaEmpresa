@@ -26,14 +26,16 @@
                 android:layout_marginStart="16dp"
                 android:layout_marginTop="45dp"
                 android:layout_marginEnd="16dp"
+                android:autofillHints="name"
                 android:ems="10"
                 android:hint="@string/nome"
+                android:digits="@string/digitos_nome"
                 android:inputType="textCapWords"
+                android:maxLength="25"
                 android:minHeight="48dp"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent"
-                android:autofillHints="name"/>
+                app:layout_constraintTop_toTopOf="parent" />
 
             <EditText
                 android:id="@+id/editText_form_sobrenome"
@@ -43,15 +45,17 @@
                 android:layout_marginTop="30dp"
                 android:layout_marginEnd="16dp"
                 android:autofillHints="name"
+                android:digits="@string/digitos_nome"
                 android:ems="10"
                 android:hint="@string/sobrenome"
                 android:inputType="textCapWords"
+                android:maxLength="30"
                 android:minHeight="48dp"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintHorizontal_bias="1.0"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/editText_form_nome"
-                tools:ignore="TextContrastCheck" />
+                tools:ignore="TouchTargetSizeCheck" />
 
             <TextView
                 android:id="@+id/textView_form_cargo"
@@ -143,6 +147,8 @@
                 android:layout_marginTop="30dp"
                 android:focusable="false"
                 android:hint="@string/data_de_nascimento"
+                android:importantForAutofill="no"
+                android:inputType="date"
                 android:minHeight="48dp"
                 android:onClick="showDatePickerDialog"
                 android:textAlignment="textStart"
@@ -150,9 +156,7 @@
                 app:layout_constraintEnd_toEndOf="@+id/editText_form_sobrenome"
                 app:layout_constraintStart_toStartOf="@+id/editText_form_sobrenome"
                 app:layout_constraintTop_toBottomOf="@+id/editText_form_sobrenome"
-                tools:ignore="UsingOnClickInXml,TextContrastCheck"
-                android:inputType="date"
-                android:importantForAutofill="no" />
+                tools:ignore="UsingOnClickInXml,TextContrastCheck" />
 
         </androidx.constraintlayout.widget.ConstraintLayout>
 
